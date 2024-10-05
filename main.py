@@ -18,7 +18,6 @@ df['target'] = df.target.map({0: 0 , 1: 1 , 2: 1 , 3: 1 , 4: 1})
 df['thal'] = df.thal.fillna(df.thal.mean())
 df['ca'] = df.ca.fillna(df.ca.mean())
 
-distribution of target vs age
 plt.figure(figsize=(15, 6))
 sns.countplot(x='age', data=df, hue='target')
 plt.title('Distribution of Age vs Target')
@@ -27,7 +26,6 @@ plt.ylabel('Count')
 plt.legend(title='Target', loc='upper right')
 plt.show()
 
-barplot of age vs sex with hue = target
 plt.figure(figsize=(15, 6))
 sns.barplot(x='sex', y='age', data=df, hue='target')
 plt.title('barplot of age vs sex with hue = target')
